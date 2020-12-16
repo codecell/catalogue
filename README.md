@@ -7,7 +7,7 @@ A basic catalogue app to play around with the [financialmodelingprep](https://fi
 |<img src='./readmeAssets/' />|<img src='./readmeAssets/' />|
 
 ## Live version
-[calculator](https://calculatepro.herokuapp.com/)
+[catalogue](https://incomecatalogue.herokuapp.com/)
 
 ## Technologies
   - React
