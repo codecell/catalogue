@@ -1,8 +1,5 @@
-import { cleanup } from '@testing-library/react';
 import catalogueReducer from '../catalogue';
 import { FETCH_CATALOGUE_SUCCESS, FETCH_CATALOGUE_FAILURE } from '../../actions/types';
-
-afterEach(cleanup);
 
 const initState = {
   catalogue: [],

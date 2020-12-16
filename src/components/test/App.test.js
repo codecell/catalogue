@@ -12,7 +12,11 @@ it('Renders without Crashing', () => {
   const div = document.createElement('div');
   const initialState = {
     catalogue: {
-      catalogue: [{ date: '2018-12-10' }, { date: '2020-11-10' }, { date: '2021-11-10' }],
+      catalogue: [
+        { date: '2018-12-10', symbol: 'AA', acceptedDate: '2018-12-18' },
+        { date: '2018-12-11', symbol: 'AA', acceptedDate: '2019-12-19' },
+        { date: '2020-12-10', symbol: 'AA', acceptedDate: '2018-12-23' },
+      ],
     },
     apiError: '',
   };
