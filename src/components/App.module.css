@@ -1,0 +1,66 @@
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #fa5091;
+}
+
+.header {
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  border-bottom: 1px solid #cf326e;
+}
+
+.filterForm {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.5em 0;
+  align-items: center;
+}
+
+.filterForm span {
+  color: #fff;
+  margin-right: 1em;
+}
+
+.itemCard,
+.pageDetailsCard {
+  background-color: #fa5091;
+  margin: 0 1em 1em 0;
+  padding: 0.5em;
+  border: 1px solid #cf326e;
+  text-decoration: none;
+  color: #efefef;
+  transition: 250ms;
+}
+
+.itemCard {
+  flex: 25%;
+}
+
+.itemCard span {
+  margin-left: 1em;
+}
+
+.itemCard:hover {
+  background-color: #cf326e;
+}
+
+.select {
+  padding: 0.5em;
+  border: 1px solid #cf326e;
+  border-radius: 10px;
+}
+
+.select:focus {
+  outline: none;
+}
+
+.detailsHeader {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
