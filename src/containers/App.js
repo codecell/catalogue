@@ -1,9 +1,3 @@
-/* eslint-disable  no-unused-vars, no-console,
-  jsx-a11y/click-events-have-key-events,
-  jsx-a11y/no-static-element-interactions, jsx-a11y/label-has-associated-control,
-  jsx-a11y/anchor-is-valid
-  */
-
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -13,7 +7,7 @@ import PropTypes from 'prop-types';
 
 import styles from '../css/app.module.css';
 import Filter from '../components/Filter';
-import { fetchCatalogue } from '../actions';
+import fetchCatalogue from '../actions';
 
 function App({ forUnitTesting }) {
   const catalogue = useSelector(state => state.catalogue.catalogue);

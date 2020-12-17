@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export, no-unused-vars, no-console */
 import axios from 'axios';
 import { FETCH_CATALOGUE_SUCCESS, FETCH_CATALOGUE_FAILURE } from './types';
 
@@ -6,7 +5,7 @@ import { FETCH_CATALOGUE_SUCCESS, FETCH_CATALOGUE_FAILURE } from './types';
  * @description fetchCatalogue - The action creator to query company's income-statement
  */
 const fetchCatalogue = company => async dispatch => {
-  const url = `https://financialmodelingprep.com/api/v3/income-statement/${company}?limit=120&apikey=f8800257c48564a25aae551222db6442`;
+  const url = `https://financialmodelingprep.com/api/v3/income-statement/${company}?limit=120&apikey=demo`;
   // const url = `https://financialmodelingprep.com/api/v3/income-statement/${company}?limit=120&apikey=${process.env.REACT_APP_API_KEY}`;
 
   try {
@@ -26,6 +25,4 @@ const fetchCatalogue = company => async dispatch => {
   }
 };
 
-export {
-  fetchCatalogue,
-};
+export default fetchCatalogue;
