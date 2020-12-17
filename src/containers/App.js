@@ -107,7 +107,7 @@ function App({ forUnitTesting }) {
                       Revenue:
                       {`  ${revenue}`}
                     </p>
-                    <a href="/">
+                    <a className={styles.backToHomeBtn} href="/">
                       Back to Home
                     </a>
                   </div>

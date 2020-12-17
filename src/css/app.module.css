@@ -64,3 +64,16 @@
   width: 100%;
   display: block;
 }
+
+.backToHomeBtn {
+  padding: 0.2em;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  transition: 250ms;
+}
+
+.backToHomeBtn:hover {
+  color: #efefef;
+}

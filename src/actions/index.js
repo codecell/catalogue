@@ -6,7 +6,6 @@ import { FETCH_CATALOGUE_SUCCESS, FETCH_CATALOGUE_FAILURE } from './types';
  */
 const fetchCatalogue = company => async dispatch => {
   const url = `https://financialmodelingprep.com/api/v3/income-statement/${company}?limit=120&apikey=demo`;
-  // const url = `https://financialmodelingprep.com/api/v3/income-statement/${company}?limit=120&apikey=${process.env.REACT_APP_API_KEY}`;
 
   try {
     const response = await axios.get(url);
