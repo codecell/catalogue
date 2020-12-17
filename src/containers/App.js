@@ -11,9 +11,9 @@ import {
 } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import styles from './App.module.css';
+import styles from '../css/app.module.css';
+import Filter from '../components/Filter';
 import { fetchCatalogue } from '../actions';
-import companies from '../utils';
 
 function App({ forUnitTesting }) {
   const catalogue = useSelector(state => state.catalogue.catalogue);
@@ -30,11 +30,10 @@ function App({ forUnitTesting }) {
 
   // Update state with selected company
   const onCompanySelect = event => {
-    event.preventDefault();
-
     const selectedCompany = event.target.value;
     setCompany(selectedCompany);
     dispatch(fetchCatalogue(selectedCompany));
+    setGoToRoute(false);
   };
 
   return (
@@ -50,19 +49,7 @@ function App({ forUnitTesting }) {
           {apiError}
         </h3>
         )}
-        <form className={styles.filterForm} style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
-          <span>Choose Company: </span>
-          <select
-            name="company"
-            onChange={event => onCompanySelect(event)}
-            className={styles.select}
-          >
-            <option disabled defaultValue hidden>Select Company</option>
-            {companies.map(item => (
-              <option value={item} key={item}>{item}</option>
-            ))}
-          </select>
-        </form>
+        <Filter handleChange={event => onCompanySelect(event)} />
         <section style={{ display: 'flex', flexWrap: 'wrap' }}>
           {goToRoute ? (
             <Switch
@@ -134,7 +121,8 @@ function App({ forUnitTesting }) {
               ))}
             </Switch>
           )
-            : (catalogue.length > 0 && typeof (catalogue === Array)) && catalogue.map(({
+            : (!goToRoute && catalogue.length > 0 && typeof (catalogue === Array))
+            && catalogue.map(({
               symbol, date, netIncome, revenue, acceptedDate,
               grossProfit, incomeBeforeTax, interestExpense,
             }) => (

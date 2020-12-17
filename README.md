@@ -4,7 +4,7 @@ A basic catalogue app to play around with the [financialmodelingprep](https://fi
 ## Preview
 |                |                |
 |----------------|----------------|
-|<img src='./readmeAssets/' />|<img src='./readmeAssets/' />|
+|<img src='./assets/pic.png' />|<img src='./assets/pic2.png' />|
 
 ## Live version
 [catalogue](https://incomecatalogue.herokuapp.com/)
